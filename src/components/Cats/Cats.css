@@ -1,0 +1,26 @@
+.Cats {
+  min-height: 100vh;
+  width: 100vw;
+  background-color: var(--purple);
+  text-align: center;
+  padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Cats a {
+  margin: 10px;
+  padding: 0 2px 3px;
+  border-bottom: 1px solid var(--nav-link);
+  font-size: .9rem;
+  text-transform: lowercase;
+  color: var(--black);
+  text-decoration: none;
+  cursor: pointer;
+  transition: all .5s ease-in-out;
+  opacity: .5;
+}
+
+
+

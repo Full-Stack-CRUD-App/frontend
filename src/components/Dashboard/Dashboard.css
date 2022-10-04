@@ -1,0 +1,19 @@
+.Dashboard {
+  background-color: rgb(255, 251, 251);
+  
+  width: 100vw;
+  min-height: 100vh;
+  padding: 50px;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Dashboard form {
+  display: grid;
+  gap: 10px;
+  
+  padding: 20px;
+  width: 320px;
+}

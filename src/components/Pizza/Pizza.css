@@ -1,0 +1,10 @@
+.Pizza {
+  background-color: var(--pink);
+  min-height: 100vh;
+  text-align: center;
+  padding: 50px;
+}
+
+h1 {
+  color: var(--black);
+}

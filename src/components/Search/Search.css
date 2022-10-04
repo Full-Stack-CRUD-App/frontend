@@ -1,0 +1,71 @@
+.Search {
+  background-color: lightsalmon;
+  padding: 50px 75px;
+  min-height: 100vh;
+}
+
+
+
+.SearchResults {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+}
+
+.SearchForm {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 500px;
+  margin-bottom: 20px;
+  align-items: flex-end;
+}
+
+.SearchResultCard {
+  color: black;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow:
+    0 1px 1px hsl(0deg 0% 0% / 0.025),
+    0 2px 2px hsl(0deg 0% 0% / 0.025),
+    0 4px 4px hsl(0deg 0% 0% / 0.025),
+    0 8px 8px hsl(0deg 0% 0% / 0.025),
+    0 16px 16px hsl(0deg 0% 0% / 0.025)
+  ;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 10px 15px;
+  margin: 15px 15px 25px 0;
+}
+
+.SearchResultCard h1 {
+  font-size: .6rem;
+  padding: 5px;
+  letter-spacing: .75px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.SearchResultCard p {
+  font-size: .5rem;
+  padding: 10px 5px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.SearchResultCard span {
+  font-size: .5rem;
+  padding: 10px 5px;
+  font-weight: 600;
+  letter-spacing: normal;
+}
+
+img {
+  width: 110px;
+  margin: 0;
+}
+
