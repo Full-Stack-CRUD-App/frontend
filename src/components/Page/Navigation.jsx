@@ -8,6 +8,7 @@ export default function Navigation() {
       <NavLink to="search">Search</NavLink>
       <NavLink to="pizza">Pizza</NavLink>
       <NavLink to="cats">Cats</NavLink>
+      <NavLink to="auth">Auth</NavLink>
     </nav>
   );
 }

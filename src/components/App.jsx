@@ -4,6 +4,8 @@ import {
   Route,
   Navigate,
 } from 'react-router-dom';
+import Auth from './Auth/Auth.jsx';
+import AuthForm from './Auth/AuthForm.jsx';
 import Cats from './Cats/Cats.jsx';
 import JackieLegs from './Cats/JackieLegs.jsx';
 import Renly from './Cats/Renly.jsx';
@@ -17,6 +19,8 @@ export default function App() {
   return (
     <Router>
       <Routes>
+
+
         <Route element={<Layout />}>
           <Route index element={<Dashboard />} />
           <Route path="search" element={<Search />} />
@@ -25,6 +29,12 @@ export default function App() {
             <Route index element={<Renly />} />
             <Route path ="jackielegs" element={<JackieLegs />} />
             <Route path ="shadow" element={<Shadow />} />
+          </Route>
+
+
+          <Route path="auth" element={<Auth />}>
+            <Route index element={<AuthForm mode="signin" />} />
+            <Route path="signup" element={<AuthForm mode="signup" />} />
           </Route>
 
 
