@@ -4,6 +4,7 @@
   align-items: center;
   width: 100vw;
   height: 100%;
+  background-color: inherit;
 }
 
 .Navigation a {
@@ -11,8 +12,10 @@
   text-decoration: none;
   cursor: pointer;
   transition: all .5s ease-in-out;
-  opacity: .5;
+  opacity: .7;
   font-size: .8rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
 a:hover {

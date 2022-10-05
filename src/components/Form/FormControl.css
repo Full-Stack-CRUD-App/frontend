@@ -15,16 +15,17 @@
 .LabelText {
   display: grid;
   gap: 6px;
-  font-size: .6rem;
+  font-size: .8rem;
   letter-spacing: 1px;
   text-transform: uppercase;
 }
 
-  .LabelText .Required::before {
+.LabelText .Required::before {
     content: ' *';
     position: relative;
     top: -3px;
-    color: rgb(190, 63, 63);
+    color: rgb(144, 27, 27);
+    font-size: 1rem;
   }
 
 .FormControl input:not([type='checkbox']):not([type='radio']), 
@@ -106,7 +107,7 @@ input[type='checkbox'] {
     0 16px 16px hsl(0deg 0% 0% / 0.025)
   ;
   
-  font-size: .7rem;
+  font-size: .8rem;
   text-transform: uppercase;
   letter-spacing: 2px;
   cursor: pointer;

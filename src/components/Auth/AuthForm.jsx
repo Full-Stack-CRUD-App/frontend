@@ -12,11 +12,13 @@ export default function AuthForm() {
         label="Email"
         name="email"
         type="email"
+        required
       />
       <InputControl
         label="Password"
         name="password"
         type="password"
+        required
       />
       <FormButton>Submit</FormButton>
     </form>

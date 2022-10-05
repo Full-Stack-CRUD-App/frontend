@@ -4,6 +4,6 @@
   gap: 30px;
 }
 
-.AuthForm label {
+.AuthForm .LabelText {
   font-size: .8rem;
 }
