@@ -2,8 +2,8 @@ import styles from './Dashboard.css';
 import {
   InputControl,
   SelectControl,
-  TextAreaControl,
-  CheckboxControl,
+  // TextAreaControl,
+  // CheckboxControl,
   FormButton
 } from '../Form/FormControl';
 
@@ -13,41 +13,35 @@ export default function Dashboard() {
       <form>
 
         <InputControl
-          label="Name"
-          name="name"
-          placeholder="your name"
+          label="Item"
+          name="item"
+          placeholder="enter an item"
+          required
         />
         
         <InputControl
-          label="Date"
+          label="Quantity"
           required
-          type="date"
-          name="date"
+          type="number"
+          name="quantity"
+          placeholder="enter quantity"
         />
 
 
         <SelectControl
-          label="Option"
+          label="Urgency"
           required
-          name="option"
-          placeholder="select an option"
+          name="urgency"
+          placeholder="when do you need this item?"
         >
-          <option value="1">A</option>
-          <option value="2">B</option>
-          <option value="3">C</option>
+          <option value="now">now</option>
+          <option value="tomorrow">tomorrow</option>
+          <option value="whenever">whenever</option>
         </SelectControl>
 
-        <TextAreaControl
-          label="Bio"
-          name="bio"
-          placeholder="tell us about yourself"
-        />
 
-        <CheckboxControl legend="Do you accept our terms and services?"
-          label="I accept" />
-        
       
-        <FormButton>Submit</FormButton>
+        <FormButton>Add item</FormButton>
       </form>
     </div>
   );

@@ -20,6 +20,13 @@
   text-transform: uppercase;
 }
 
+  .LabelText .Required::before {
+    content: ' *';
+    position: relative;
+    top: -3px;
+    color: rgb(190, 63, 63);
+  }
+
 .FormControl input:not([type='checkbox']):not([type='radio']), 
 select, 
 textarea {
