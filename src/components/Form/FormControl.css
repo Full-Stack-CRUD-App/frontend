@@ -84,11 +84,11 @@ input[type='checkbox'] {
   border: none;
   border-radius: 5px;
   box-shadow:
-    0 1px 1px hsl(0deg 0% 0% / 0.025),
-    0 2px 2px hsl(0deg 0% 0% / 0.025),
-    0 4px 4px hsl(0deg 0% 0% / 0.025),
-    0 8px 8px hsl(0deg 0% 0% / 0.025),
-    0 16px 16px hsl(0deg 0% 0% / 0.025)
+    0 1px 1px hsl(0deg 0% 0% / 0.045),
+    0 2px 2px hsl(0deg 0% 0% / 0.045),
+    0 4px 4px hsl(0deg 0% 0% / 0.045),
+    0 8px 8px hsl(0deg 0% 0% / 0.045),
+    0 16px 16px hsl(0deg 0% 0% / 0.045)
   ;
   
   font-family: 'Montserrat';
@@ -97,19 +97,20 @@ input[type='checkbox'] {
 
 .FormButton {
   background-color: white;
-  padding: 10px;
+  padding: 13px;
   border-radius: 5px;
   box-shadow:
-    0 1px 1px hsl(0deg 0% 0% / 0.025),
-    0 2px 2px hsl(0deg 0% 0% / 0.025),
-    0 4px 4px hsl(0deg 0% 0% / 0.025),
-    0 8px 8px hsl(0deg 0% 0% / 0.025),
-    0 16px 16px hsl(0deg 0% 0% / 0.025)
+    0 1px 1px hsl(0deg 0% 0% / 0.075),
+    0 2px 2px hsl(0deg 0% 0% / 0.075),
+    0 4px 4px hsl(0deg 0% 0% / 0.075),
+    0 8px 8px hsl(0deg 0% 0% / 0.075),
+    0 16px 16px hsl(0deg 0% 0% / 0.075)
   ;
   
   font-size: .8rem;
   text-transform: uppercase;
   letter-spacing: 2px;
   cursor: pointer;
-
+  margin: 10px 0;
+  opacity: .7;
 }
