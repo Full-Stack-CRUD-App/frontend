@@ -134,7 +134,7 @@ test('form updates partial data from initial data', async () => {
 
 });
 
-test('Form updates when initial data changes', async () => {
+test.skip('Form updates when initial data changes', async () => {
   const user = userEvent.setup();
 
   const handleSubmit = jest.fn();
