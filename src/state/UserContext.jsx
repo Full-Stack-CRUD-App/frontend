@@ -10,8 +10,8 @@ import {
   signOutUser,
   signUpUser,
   storeLocalUser,
-  verifyUser
-} from '../services/auth';
+  verifyUser,
+} from '../services/auth.js';
 
 const UserContext = createContext();
 
@@ -36,7 +36,7 @@ export default function UserProvider({ children }) {
 
   const value = {
     user,
-    setUser
+    setUser,
   };
 
   return (
@@ -82,5 +82,5 @@ export function useAuth() {
     handleResponse(response);
   };
 
-  return (signUp, signIn, signOut, error);
+  return { signUp, signIn, signOut, error };
 }
