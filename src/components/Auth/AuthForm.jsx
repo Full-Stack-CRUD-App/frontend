@@ -46,7 +46,8 @@ export default function AuthForm({ mode = 'signin' }) {
 
   return (
     <form className={styles.AuthForm} onSubmit={handleSubmit}>
-      <h2>Sign in</h2>
+      <h2>{type.prompt}</h2>
+      
       <InputControl
         label="Email"
         name="email"

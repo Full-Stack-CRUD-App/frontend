@@ -1,15 +1,11 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
 function getValue(target) {
   return target.type === 'checkbox' ? target.checked : target.value;
 }
 
 export function useForm(formData) {
-  const [data, setData] = useState(formData ?? {});
-
-  useEffect(() => {
-    setData(formData ?? {});
-  }, [formData]);
+  const [data, setData] = useState({ ...formData });
 
   const handleChange = ({ target }) => {
     setData((data) => ({
@@ -18,5 +14,7 @@ export function useForm(formData) {
     }));
   };
 
-  return [data, handleChange];
+  const reset = () => setData({ ...formData });
+
+  return [data, handleChange, reset];
 }
