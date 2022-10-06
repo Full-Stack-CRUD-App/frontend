@@ -1,4 +1,7 @@
-import { InputControl, FormButton } from '../Form/FormControl.jsx';
+import {
+  InputControl,
+  FormButton
+} from '../Form/FormControl.jsx';
 import styles from './AuthForm.css';
 
 
