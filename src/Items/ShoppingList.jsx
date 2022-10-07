@@ -4,10 +4,14 @@ import ItemForm from './ItemForm.jsx';
 import styles from './ShoppingList.css';
 
 export function ShoppingList() {
-  const { items, addItem } = useListContext();
+  const { items, addItem, buyItem } = useListContext();
 
   const handleAdd = async (item) => {
     await addItem(item);
+  };
+  
+  const handleBuy = async ({ id }) => {
+    await buyItem(id);
   };
 
   return (
@@ -20,7 +24,7 @@ export function ShoppingList() {
             <Item
               key={item.id}
               item={item}
-              // onBuy={handleBuy}
+              onBuy={handleBuy}
               // onRemove={handleRemove}
             />
           ))}

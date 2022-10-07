@@ -9,10 +9,10 @@ export default function Item({ item, onBuy, onRemove }) {
     <li className={styles.Item}>
 
       {bought ? (
-        <span className={styles.Bought}></span>
+        <span className={styles.Bought}>bought</span>
       ) : (
         <FormButton onClick={() => onBuy(item)}>
-          
+        
         </FormButton>
       )}
 
