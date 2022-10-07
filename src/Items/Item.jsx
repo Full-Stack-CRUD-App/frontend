@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import { FormButton, CheckboxControl } from '../components/Form/FormControl';
+import { FormButton } from '../components/Form/FormControl';
 import styles from './Item.css';
 
 export default function Item({ item, onBuy, onRemove }) {

@@ -4,8 +4,8 @@ function getValue(target) {
   return target.type === 'checkbox' ? target.checked : target.value;
 }
 
-export function useForm(formData) {
-  const [data, setData] = useState({ ...formData });
+export function useForm(initialData) {
+  const [data, setData] = useState({ ...initialData });
 
   const handleChange = ({ target }) => {
     setData((data) => ({
@@ -14,7 +14,7 @@ export function useForm(formData) {
     }));
   };
 
-  const reset = () => setData({ ...formData });
+  const reset = () => setData({ ...initialData });
 
   return [data, handleChange, reset];
 }
