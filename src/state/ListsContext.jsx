@@ -8,7 +8,8 @@ import { Outlet } from 'react-router-dom';
 import {
   getItems,
   createItem,
-  updateItem, 
+  updateItem,
+  deleteItem, 
 } from '../services/items.js';
 
 const ListsContext = createContext();
@@ -103,7 +104,22 @@ export function useListContext() {
     }
   };
 
-  return { items, error, addItem, buyItem };
+  const removeItem = async (itemId) => {
+    const { error } = await deleteItem(itemId);
+
+    if (error) {
+      setError(error.message);
+    } else {
+      const updatedList = {
+        ...items,
+        items: items.filter((item) => item.id !== itemId),
+      };
+      updateItem(updatedList);
+      setError(null);
+    }
+  };
+
+  return { items, error, addItem, buyItem, removeItem };
 }
 
 

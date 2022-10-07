@@ -4,7 +4,7 @@ import ItemForm from './ItemForm.jsx';
 import styles from './ShoppingList.css';
 
 export function ShoppingList() {
-  const { items, addItem, buyItem } = useListContext();
+  const { items, addItem, buyItem, removeItem } = useListContext();
 
   const handleAdd = async (item) => {
     await addItem(item);
@@ -13,6 +13,14 @@ export function ShoppingList() {
   const handleBuy = async ({ id }) => {
     await buyItem(id);
   };
+
+  const handleRemove = async ({ id, description, qty }) => {
+    const message = `You are sure you want to remove ${qty} ${description}?`;
+    if (confirm(message)) {
+      await removeItem(id);
+    }
+  };
+
 
   return (
     <section className={styles.ShoppingList}>
@@ -25,7 +33,7 @@ export function ShoppingList() {
               key={item.id}
               item={item}
               onBuy={handleBuy}
-              // onRemove={handleRemove}
+              onRemove={handleRemove}
             />
           ))}
       </ul>
