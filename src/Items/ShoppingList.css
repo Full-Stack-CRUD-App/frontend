@@ -1,4 +1,4 @@
-.Lists {
+.ShoppingList {
   padding: 50px;
   min-height: 100vh;
   background-color: rgb(58, 84, 57);
@@ -7,7 +7,7 @@
   align-items: center;
 }
 
-.Lists h2 {
+.ShoppingList h2 {
   color: white;
   padding: 20px 90px;
   margin: 20px;

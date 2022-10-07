@@ -4,8 +4,7 @@ import {
   Route,
   Navigate,
 } from 'react-router-dom';
-import { Lists } from '../Lists/Lists.jsx';
-import { ShoppingList } from '../Lists/ShoppingList.jsx';
+import { ShoppingList } from '../Items/ShoppingList.jsx';
 import ListsProvider from '../state/ListsContext.jsx';
 import UserProvider from '../state/UserContext.jsx';
 import Auth from './Auth/Auth.jsx';
@@ -30,10 +29,7 @@ export default function App() {
             <Route element={<Layout />}>
               <Route index element={<Dashboard />} />
               <Route element={<ListsProvider />}>
-                <Route path="lists">
-                  <Route index element={<Lists />} />
-                  <Route path=":id" element={<ShoppingList />} />
-                </Route>
+                <Route path="items" element={<ShoppingList />} />
               </Route>
               <Route path="search" element={<Search />} />
             </Route>
