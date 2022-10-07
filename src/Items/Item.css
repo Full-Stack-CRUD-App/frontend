@@ -1,0 +1,19 @@
+.Item {
+  display: grid;
+  grid-template-columns: 50px 1fr auto;
+  grid-auto-rows: 40px;
+  align-items: center;
+  gap: 10px;
+  font-size: .8rem;
+}
+
+.Bought {
+  display: grid;
+  place-self: center;
+  color: black;
+}
+
+.RemoveButton {
+  padding: 5px;
+  border: 1px dashed var(--light-accent-color);
+}

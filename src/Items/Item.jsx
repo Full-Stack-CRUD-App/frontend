@@ -1,12 +1,33 @@
 /* eslint-disable react/prop-types */
-import { FormButton } from '../components/Form/FormControl';
+import { FormButton, CheckboxControl } from '../components/Form/FormControl';
+import styles from './Item.css';
 
-export default function Item({ items, onBuy, onRemove }) {
-  const { qty, description } = items;
+export default function Item({ item, onBuy, onRemove }) {
+  const { bought, qty, description } = item;
 
   return (
-    <li>
-      {qty} {description}
+    <li className={styles.Item}>
+
+      {bought ? (
+        <span className={styles.Bought}></span>
+      ) : (
+        <FormButton onClick={() => onBuy(item)}>
+          
+        </FormButton>
+      )}
+
+
+      <span>
+        {qty} {description}
+      </span>
+
+      <button
+        className={styles.RemoveButton}
+        onClick={() => onRemove(item)}
+      >
+        X
+      </button>
     </li>
   );
 }
+

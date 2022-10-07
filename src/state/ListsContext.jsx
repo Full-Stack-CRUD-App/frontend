@@ -51,8 +51,8 @@ export default function ListsProvider({ children }) {
 }
 
 export function useListContext() {
-  // const [error, setError] = useState(null);
-  const { items, setItems, error, setError } = useContext(ListsContext);
+  const [error, setError] = useState(null);
+  const { items, setItems } = useContext(ListsContext);
 
   const addItem = async (item) => {
     const { data, error } = await createItem(item);
@@ -66,3 +66,5 @@ export function useListContext() {
 
   return { items, error, addItem };
 }
+
+

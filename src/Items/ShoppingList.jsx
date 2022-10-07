@@ -1,31 +1,29 @@
 import { useListContext } from '../state/ListsContext';
+import Item from './Item';
 import ItemForm from './ItemForm.jsx';
-import Item from './Item.jsx';
+import styles from './ShoppingList.css';
 
 export function ShoppingList() {
   const { items, addItem } = useListContext();
-  console.log(items);
 
-
-
-  const handleAdd = async (description, qty) => {
-    await addItem({ description, qty, bought: false });
+  const handleAdd = async (item) => {
+    await addItem(item);
   };
 
-
-
   return (
-    <section>
-
-
+    <section className={styles.ShoppingList}>
+      <h2>Shopping List</h2>
       <ItemForm onAdd={handleAdd} />
-
-      <ul>
+      <ul className={styles.ItemList}>
         {items &&
-          items.map((item, i) => <li key={item.id + i}>
-            {item.description}
-            {item.qty}
-          </li>)}
+          items.map((item) => (
+            <Item
+              key={item.id}
+              item={item}
+              // onBuy={handleBuy}
+              // onRemove={handleRemove}
+            />
+          ))}
       </ul>
     </section>
   );
