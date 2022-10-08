@@ -16,8 +16,8 @@ const ListsContext = createContext();
 
 // eslint-disable-next-line react/prop-types
 export default function ListsProvider({ children }) {
-  const [items, setItems] = useState([]);
-  const [newItem, setNewItem] = useState('');
+  const [items, setItems] = useState(null);
+  // const [newItem, setNewItem] = useState('');
   const [itemsById, setItemsById] = useState({});
 
   const fetchItems = async () => {
@@ -43,6 +43,10 @@ export default function ListsProvider({ children }) {
   
   const addItems = (item) => {
     setItems((items) => [...items, item]);
+    setItemsById((itemsById) => ({
+      ...itemsById,
+      [item.id]: item,
+    }));
   };
 
   const updateItem = (updated) => {
@@ -60,7 +64,8 @@ export default function ListsProvider({ children }) {
   
   const value = {
     items, setItems,
-    newItem, setNewItem,
+    itemsById,
+    // newItem, setNewItem,
     addItems, updateItem
   };
 

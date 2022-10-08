@@ -22,7 +22,7 @@ export default function ItemForm({ onAdd, ...rest }) {
   return (
     <form className={styles.ItemForm} onSubmit={handleSubmit}>
       <InputControl
-        label="Description"
+        label="Item"
         name="description"
         required
         value={data.description}

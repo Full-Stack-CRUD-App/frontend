@@ -1,10 +1,14 @@
+import { useParams } from 'react-router-dom';
 import { useListContext } from '../state/ListsContext';
 import Item from './Item';
 import ItemForm from './ItemForm.jsx';
 import styles from './ShoppingList.css';
 
 export function ShoppingList() {
-  const { items, addItem, buyItem, removeItem } = useListContext();
+  const { id } = useParams();
+  const { items, addItem, buyItem, removeItem } = useListContext(id);
+  if (!items) return null;
+
 
   const handleAdd = async (item) => {
     await addItem(item);
@@ -27,7 +31,7 @@ export function ShoppingList() {
       <h2>Shopping List</h2>
       <ItemForm onAdd={handleAdd} />
       <ul className={styles.ItemList}>
-        {items &&
+        {
           items.map((item) => (
             <Item
               key={item.id}
