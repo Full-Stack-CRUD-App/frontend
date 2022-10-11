@@ -8,6 +8,19 @@
   color: white;
 }
 
+.ShoppingList a {
+  color: rgb(183, 132, 3);
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 20px 4px 5px 4px;
+  border-bottom: 1px solid rgb(183, 132, 3);
+  transition: all 1s ease;
+}
+
+.ShoppingList a:hover {
+  opacity: .5;
+}
+
 .ShoppingList h2 {
   color: white;
   padding: 25px 30px;

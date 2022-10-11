@@ -1,10 +1,12 @@
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { useListContext } from '../state/ListsContext';
+import { useAuth, useUser } from '../state/UserContext';
 import Item from './Item';
 import ItemForm from './ItemForm.jsx';
 import styles from './ShoppingList.css';
 
 export function ShoppingList() {
+  const { signOut } = useAuth();
   const { id } = useParams();
   const { items, addItem, buyItem, removeItem } = useListContext(id);
   if (!items) return null;
@@ -41,6 +43,7 @@ export function ShoppingList() {
             />
           ))}
       </ul>
+      <Link to="signout" onClick={signOut}>Sign Out</Link>
     </section>
   );
 }
