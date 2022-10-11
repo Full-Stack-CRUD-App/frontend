@@ -4,16 +4,29 @@
   grid-auto-rows: 40px;
   align-items: center;
   gap: 10px;
-  font-size: .8rem;
+  font-size: .7rem;
+  text-transform: uppercase;
 }
 
 .Bought {
   display: grid;
   place-self: center;
-  color: black;
+  background-color: black;
+  padding: 13px;
+  border-radius: 5px;
+
 }
 
 .RemoveButton {
-  padding: 5px;
-  border: 1px dashed var(--light-accent-color);
+  padding: 7px;
+  border-radius: 5px;
+  box-shadow: 0 1px 1px hsl(0deg 0% 0% / 8%), 0 2px 2px hsl(0deg 0% 0% / 8%), 0 4px 4px hsl(0deg 0% 0% / 8%), 0 8px 8px hsl(0deg 0% 0% / 8%), 0 16px 16px hsl(0deg 0% 0% / 8%);
+  font-size: .8rem;
+  background-color: white;
+  color: white;
+  cursor: pointer;
+}
+
+.RemoveButton:hover {
+  opacity: .5;
 }

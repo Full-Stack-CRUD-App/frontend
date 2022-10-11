@@ -6,6 +6,7 @@ import ItemForm from './ItemForm.jsx';
 import styles from './ShoppingList.css';
 
 export function ShoppingList() {
+
   const { signOut } = useAuth();
   const { id } = useParams();
   const { items, addItem, buyItem, removeItem } = useListContext(id);
@@ -20,11 +21,9 @@ export function ShoppingList() {
     await buyItem(id);
   };
 
-  const handleRemove = async ({ id, description, qty }) => {
-    const message = `You are sure you want to remove ${qty} ${description}?`;
-    if (confirm(message)) {
-      await removeItem(id);
-    }
+  const handleRemove = async ({ id }) => {
+
+    await removeItem(id);
   };
 
 

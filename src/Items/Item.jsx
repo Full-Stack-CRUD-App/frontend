@@ -9,7 +9,7 @@ export default function Item({ item, onBuy, onRemove }) {
     <li className={styles.Item}>
 
       {bought ? (
-        <span className={styles.Bought}>bought</span>
+        <button className={styles.Bought}></button>
       ) : (
         <FormButton onClick={() => onBuy(item)}>
         
@@ -18,14 +18,14 @@ export default function Item({ item, onBuy, onRemove }) {
 
 
       <span>
-        {qty} {description}
+        {description} x {qty}
       </span>
 
       <button
         className={styles.RemoveButton}
         onClick={() => onRemove(item)}
       >
-        X
+        ❌
       </button>
     </li>
   );
