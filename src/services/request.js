@@ -6,6 +6,7 @@ async function doFetch(url, method, body) {
       'Content-Type': 'application/json',
     },
     credentials: 'include',
+    mode: 'cors',
   };
 
   if (body) options.body = JSON.stringify(body);

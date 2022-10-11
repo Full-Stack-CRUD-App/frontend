@@ -1,6 +1,6 @@
 import { Link, useParams } from 'react-router-dom';
 import { useListContext } from '../state/ListsContext';
-import { useAuth, useUser } from '../state/UserContext';
+import { useAuth } from '../state/UserContext';
 import Item from './Item';
 import ItemForm from './ItemForm.jsx';
 import styles from './ShoppingList.css';
