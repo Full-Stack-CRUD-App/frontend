@@ -42,7 +42,7 @@ export function ShoppingList() {
             />
           ))}
       </ul>
-      <Link to="signout" onClick={signOut}>Sign Out</Link>
+      <Link to="auth" onClick={signOut}>Sign Out</Link>
     </section>
   );
 }
