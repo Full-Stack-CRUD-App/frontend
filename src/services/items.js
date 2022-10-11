@@ -3,7 +3,7 @@ import { del, get, post, put } from './request.js';
 const URL = 'https://full-stack-crud-backend.herokuapp.com';
 
 export async function getItems() {
-  return await get(`${URL}`);
+  return await get(`${URL}/api/v1/items`);
 }
 
 export async function createItem(item) {
