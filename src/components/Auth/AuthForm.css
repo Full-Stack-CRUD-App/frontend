@@ -1,0 +1,9 @@
+.AuthForm {
+  width: 250px;
+  display: grid;
+  gap: 20px;
+}
+
+.AuthForm .LabelText {
+  font-size: .8rem;
+}

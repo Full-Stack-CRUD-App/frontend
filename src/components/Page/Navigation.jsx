@@ -6,8 +6,7 @@ export default function Navigation() {
     <nav className={styles.Navigation}>
       <NavLink to="">Home</NavLink>
       <NavLink to="search">Search</NavLink>
-      <NavLink to="pizza">Pizza</NavLink>
-      <NavLink to="cats">Cats</NavLink>
+      <NavLink to="items">Items</NavLink>
     </nav>
   );
 }
